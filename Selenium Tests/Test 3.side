@@ -1,0 +1,146 @@
+{
+  "id": "b319cba0-52c1-4198-80ce-679e2f23de3a",
+  "version": "2.0",
+  "name": "Test 3",
+  "url": "http://localhost:3000",
+  "tests": [{
+    "id": "a1f2bf48-7f16-4695-89fe-749252d2910e",
+    "name": "Register Student",
+    "commands": [{
+      "id": "5c190fc7-ff35-477e-b158-697d43720794",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f8052d1c-3cee-49cf-bf2d-cf369c8794cc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1048",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82658f71-f803-47c5-afdf-4f8e806273af",
+      "comment": "",
+      "command": "click",
+      "target": "css=#HomeSection a:nth-child(2)",
+      "targets": [
+        ["css=#HomeSection a:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Register New\n                        Student')]", "xpath:link"],
+        ["xpath=//a[@onclick='loadStudentRegistrationPage()']", "xpath:attributes"],
+        ["xpath=//div[@id='HomeSection']/header/nav/a[2]", "xpath:idRelative"],
+        ["xpath=//nav/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ada4a550-218e-4981-8e02-80ec9c23d40f",
+      "comment": "",
+      "command": "click",
+      "target": "name=studentfname",
+      "targets": [
+        ["name=studentfname", "name"],
+        ["css=.home > .items .user-box:nth-child(1) > input", "css:finder"],
+        ["xpath=//input[@name='studentfname']", "xpath:attributes"],
+        ["xpath=//div[@id='RegisterStudentSection']/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/form/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1768885d-104a-4772-b859-10f19fcb83da",
+      "comment": "",
+      "command": "type",
+      "target": "name=studentfname",
+      "targets": [
+        ["name=studentfname", "name"],
+        ["css=.home > .items .user-box:nth-child(1) > input", "css:finder"],
+        ["xpath=//input[@name='studentfname']", "xpath:attributes"],
+        ["xpath=//div[@id='RegisterStudentSection']/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/form/div/input", "xpath:position"]
+      ],
+      "value": "Ayush"
+    }, {
+      "id": "b3eec6c9-e76a-4213-9cb7-cc94df4c5338",
+      "comment": "",
+      "command": "click",
+      "target": "name=studentlname",
+      "targets": [
+        ["name=studentlname", "name"],
+        ["css=.home > .items .user-box:nth-child(2) > input", "css:finder"],
+        ["xpath=//input[@name='studentlname']", "xpath:attributes"],
+        ["xpath=//div[@id='RegisterStudentSection']/div/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/form/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4afda7d3-5e66-42df-8774-bdc67e8f3391",
+      "comment": "",
+      "command": "type",
+      "target": "name=studentlname",
+      "targets": [
+        ["name=studentlname", "name"],
+        ["css=.home > .items .user-box:nth-child(2) > input", "css:finder"],
+        ["xpath=//input[@name='studentlname']", "xpath:attributes"],
+        ["xpath=//div[@id='RegisterStudentSection']/div/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/form/div[2]/input", "xpath:position"]
+      ],
+      "value": "Vishvas"
+    }, {
+      "id": "66c52cfb-3c3d-494f-aa34-005ffa60ae0d",
+      "comment": "",
+      "command": "click",
+      "target": "name=studentEmail",
+      "targets": [
+        ["name=studentEmail", "name"],
+        ["css=.home .user-box:nth-child(3) > input", "css:finder"],
+        ["xpath=//input[@name='studentEmail']", "xpath:attributes"],
+        ["xpath=//div[@id='RegisterStudentSection']/div/div/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/form/div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c69b262-3c1f-423e-b653-35f998e63ea4",
+      "comment": "",
+      "command": "type",
+      "target": "name=studentEmail",
+      "targets": [
+        ["name=studentEmail", "name"],
+        ["css=.home .user-box:nth-child(3) > input", "css:finder"],
+        ["xpath=//input[@name='studentEmail']", "xpath:attributes"],
+        ["xpath=//div[@id='RegisterStudentSection']/div/div/div/form/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/form/div[3]/input", "xpath:position"]
+      ],
+      "value": "ayush@gmail.com"
+    }, {
+      "id": "c42b90ae-df8c-4a22-bd7b-527817deb184",
+      "comment": "",
+      "command": "assertValue",
+      "target": "name=studentlname",
+      "targets": [],
+      "value": "Vishvas"
+    }, {
+      "id": "a2104c69-e180-493c-8236-1e5f3e5fcfb6",
+      "comment": "",
+      "command": "click",
+      "target": "css=form > a:nth-child(4)",
+      "targets": [
+        ["css=form > a:nth-child(4)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Register')])[4]", "xpath:link"],
+        ["xpath=//a[@onclick='registerStudent()']", "xpath:attributes"],
+        ["xpath=//div[@id='RegisterStudentSection']/div/div/div/form/a", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div/div/form/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "4ccf0fd8-2d32-45c7-812b-5bfcb46f5cb4",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["a1f2bf48-7f16-4695-89fe-749252d2910e"]
+  }],
+  "urls": ["http://localhost:3000/"],
+  "plugins": []
+}

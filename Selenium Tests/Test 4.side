@@ -1,0 +1,132 @@
+{
+  "id": "7899cb89-51a0-4fbc-85ee-c7ec45e785f4",
+  "version": "2.0",
+  "name": "Test 4",
+  "url": "http://localhost:3000",
+  "tests": [{
+    "id": "e68a5f45-b173-48dc-a6fe-8b47c5f8a951",
+    "name": "Add Subject and Level",
+    "commands": [{
+      "id": "b5295ad0-c413-44f6-9526-b672344e6bcd",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "10a60477-d529-400d-8b5e-332e3c601ed0",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1048",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "178541f8-16bf-4b5e-a839-0e7690f7fced",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-book",
+      "targets": [
+        ["css=.fa-book", "css:finder"],
+        ["xpath=//div[@id='HomeSection']/a[2]/div/div/i", "xpath:idRelative"],
+        ["xpath=//a[2]/div/div/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "332e3237-19ff-4b4d-b1a6-9e6104c4008a",
+      "comment": "",
+      "command": "click",
+      "target": "id=studentSurname",
+      "targets": [
+        ["id=studentSurname", "id"],
+        ["css=#studentSurname", "css:finder"],
+        ["xpath=//input[@id='studentSurname']", "xpath:attributes"],
+        ["xpath=//div[@id='AddSubjectSection']/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/div/form/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "70f9a40f-3a18-4006-8899-0944b3150667",
+      "comment": "",
+      "command": "type",
+      "target": "id=studentSurname",
+      "targets": [
+        ["id=studentSurname", "id"],
+        ["css=#studentSurname", "css:finder"],
+        ["xpath=//input[@id='studentSurname']", "xpath:attributes"],
+        ["xpath=//div[@id='AddSubjectSection']/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/div/form/div/input", "xpath:position"]
+      ],
+      "value": "Vishvas"
+    }, {
+      "id": "4d09672b-1517-464f-bd66-c464f68c81d1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.login-box a:nth-child(2)",
+      "targets": [
+        ["css=.login-box a:nth-child(2)", "css:finder"],
+        ["xpath=(//a[contains(text(),'Search')])[2]", "xpath:link"],
+        ["xpath=//a[@onclick='loadStudentSubject()']", "xpath:attributes"],
+        ["xpath=//div[@id='AddSubjectSection']/div/div/div/form/a", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/div/form/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5e44660-0d0f-49a9-8a90-8052028d6a95",
+      "comment": "",
+      "command": "click",
+      "target": "id=studentSubject",
+      "targets": [
+        ["id=studentSubject", "id"],
+        ["css=.user-box:nth-child(2) > #studentSubject", "css:finder"],
+        ["xpath=//input[@id='studentSubject']", "xpath:attributes"],
+        ["xpath=//div[@id='detailsStudentLevel']/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/div/div/form/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "19b54117-8cf8-4291-a18b-32400465a94f",
+      "comment": "",
+      "command": "type",
+      "target": "id=studentSubject",
+      "targets": [
+        ["id=studentSubject", "id"],
+        ["css=.user-box:nth-child(2) > #studentSubject", "css:finder"],
+        ["xpath=//input[@id='studentSubject']", "xpath:attributes"],
+        ["xpath=//div[@id='detailsStudentLevel']/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div/div/div/form/div[2]/input", "xpath:position"]
+      ],
+      "value": "Math"
+    }, {
+      "id": "13f29bb8-06b2-4b34-951c-4741fc77e406",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=studentSubject",
+      "targets": [],
+      "value": "Math"
+    }, {
+      "id": "62ce01d3-5944-47d7-aa30-82a3c01f2625",
+      "comment": "",
+      "command": "click",
+      "target": "css=#detailsStudentLevel > form > a",
+      "targets": [
+        ["css=#detailsStudentLevel > form > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Done')]", "xpath:link"],
+        ["xpath=//a[@onclick='studentaddsudject()']", "xpath:attributes"],
+        ["xpath=//div[@id='detailsStudentLevel']/form/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div[6]/div/div/div/div/form/a", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9893a8db-0567-4478-b325-37d63843029e",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e68a5f45-b173-48dc-a6fe-8b47c5f8a951"]
+  }],
+  "urls": ["http://localhost:3000/"],
+  "plugins": []
+}

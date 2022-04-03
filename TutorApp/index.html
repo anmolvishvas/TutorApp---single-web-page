@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- head section of the web page -->
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tutor App</title>
+        <!-- font awesome link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- css link -->
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+
+    <!-- body section of the website -->
+
+    <body>
+        <!-- login section -->
+        <div id="loginSection">
+            <!-- header / navigation of the webpage -->
+            <header>
+                <img src="/assets/Logo.png" alt="">
+                <nav class="navbar">
+                    <a onclick="loadTutorRegistrationPage()"><i class="fas fa-user-plus"></i> Register </a>
+                </nav>
+            </header>
+
+            <!-- login section -->
+            <div class="row">
+                <div class="items item">
+                    <div class="login-box">
+                        <!-- title of the section -->
+                        <h1 class="title">Login</h1>
+                        <!-- login form -->
+                        <form>
+                            <!-- email input section -->
+                            <div class="user-box">
+                                <input autocomplete="off" type="text" id="tutormail" required="">
+                                <label>Email</label>
+                            </div>
+                            <!-- password input section -->
+                            <div class="user-box">
+                                <input autocomplete="off" type="password" id="tutorpass" required="">
+                                <label>Password</label>
+                            </div>
+                            <!-- login button -->
+                            <a onclick="loginTutor()">LOGIN</a>
+                            <p style="text-align: center;">OR</p>
+                            <!-- registration button -->
+                            <a onclick="loadTutorRegistrationPage()">register</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- footer of the web page -->
+            <footer>
+                <h4>© TutorApp - All Rights Reserved </h4>
+            </footer>
+        </div>
+
+        <!-- registration section -->
+        <div id="RegistrationSection">
+            <!-- header section of the web page -->
+            <header>
+                <!-- logo -->
+                <img src="/assets/Logo.png" alt="">
+                <!-- nav bar -->
+                <nav class="navbar">
+                    <a onclick="loadLoginPage()"><i class="fas fa-user-lock"></i> login </a>
+                </nav>
+            </header>
+
+            <!-- registration form section -->
+            <div class="row">
+                <div class="items item">
+                    <div class="login-box">
+                        <!-- title of the section -->
+                        <h1 class="title">Register Tutor</h1>
+                        <!-- registration form -->
+                        <form method="POST" action="/" enctype="multipart/form-data">
+                            <!-- input section for the firtsname -->
+                            <div class="user-box">
+                                <input type="text" name="fname" required="">
+                                <label>First Name</label>
+                            </div>
+                            <!-- input section for the lastname -->
+                            <div class="user-box">
+                                <input type="text" name="lname" required="">
+                                <label>Last Name</label>
+                            </div>
+                            <!-- input section for the email -->
+                            <div class="user-box">
+                                <input type="text" name="email" required="">
+                                <label>Email</label>
+                            </div>
+                            <!-- input section for the password -->
+                            <div class="user-box">
+                                <input type="password" name="password" required="">
+                                <label>Password</label>
+                            </div>
+                            <!-- input section to upload a file -->
+                            <div class="user-box">
+                                <input type="file" id="img" required="">
+                            </div>
+                            <!-- register button -->
+                            <a href="" onclick="registerTutor()">REGISTER</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- footer of the web page -->
+            <footer>
+                <h4>© TutorApp - All Rights Reserved </h4>
+            </footer>
+        </div>
+
+        <!-- home section -->
+        <div id="HomeSection">
+            <!--  header / navigation of the section -->
+            <header>
+                <img src="/assets/Logo.png" alt="">
+                <!-- nav bar links -->
+                <nav class="navbar">
+                    <a onclick="loadHomePage()"><i class="fas fa-home"></i> Home</a>
+                    <a onclick="loadStudentRegistrationPage()"><i class="fas fa-user-plus"></i> Register New
+                        Student</a>
+                    <a onclick="logout()"><i class="fas fa-arrow-right-from-bracket"></i> Logout</a>
+                </nav>
+            </header>
+
+            <!-- section to display the options-->
+            <div class="home">
+                <div class="home_items home_item">
+
+                </div>
+            </div>
+            <!-- section to display tutor details-->
+            <div class="home">
+                <div id="tutorDisplay">
+
+                </div>
+            </div>
+
+            <!-- button to redirect the user to the view student data section -->
+            <a onclick="loadViewStudentDataPage()">
+                <div class="home">
+                    <div class="home_option home_option1">
+                        <br>
+                        <br>
+                        <br>
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <p>View Student Data</p>
+                    </div>
+                </div>
+            </a>
+            <!-- button to redirect the user to add subject and level section -->
+            <a onclick="loadAddSubjectAndLevelPage()">
+                <div class="home">
+                    <div class="home_option home_option2">
+                        <br>
+                        <br>
+                        <br>
+                        <i class="fa-solid fa-book"></i>
+                        <p>Add Subject and Level</p>
+                    </div>
+                </div>
+            </a>
+            <!-- button to redirect the user to add grades section section -->
+            <a onclick="loadAddGradesPage()">
+                <div class="home">
+                    <div class="home_option home_option3">
+                        <br>
+                        <br>
+                        <br>
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <p>Add Grades</p>
+                    </div>
+                </div>
+            </a>
+            <!-- footer section -->
+            <footer>
+                <h4>© TutorApp - All Rights Reserved </h4>
+            </footer>
+        </div>
+
+        <!-- register student section -->
+        <div id="RegisterStudentSection">
+            <!-- header/ navigation section -->
+            <header>
+                <img src="/assets/Logo.png" alt="">
+                <!-- nav bar links -->
+                <nav class="navbar">
+                    <a onclick="loadHomePage()"><i class="fas fa-home"></i> Home</a>
+                    <a onclick="loadStudentRegistrationPage()"><i class="fas fa-user-plus"></i> Register New
+                        Student</a>
+                    <a onclick="logout()"><i class="fas fa-arrow-right-from-bracket"></i> Logout</a>
+                </nav>
+            </header>
+
+            <!-- registration form section -->
+            <div class="home">
+                <div class="items item">
+                    <div class="login-box">
+                        <!-- title of the section -->
+                        <h1 class="title">Register</h1>
+                        <!-- registration form -->
+                        <form>
+                            <!-- input of first name section -->
+                            <div class="user-box">
+                                <input autocomplete="off" type="text" name="studentfname" required="">
+                                <label>First Name</label>
+                            </div>
+                            <!-- input of last name section -->
+                            <div class="user-box">
+                                <input autocomplete="off" type="text" name="studentlname" required="">
+                                <label>Last Name</label>
+                            </div>
+                            <!-- input of email section -->
+                            <div class="user-box">
+                                <input autocomplete="off" type="text" name="studentEmail" required="">
+                                <label>Email</label>
+                            </div>
+                            <!-- register button -->
+                            <a onclick="registerStudent()">Register</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- footer section -->
+            <footer>
+                <h4>© TutorApp - All Rights Reserved </h4>
+            </footer>
+        </div>
+
+        <!-- view student section -->
+        <div id="ViewStudentSection">
+            <!-- header / navigation section -->
+            <header>
+                <img src="/assets/Logo.png" alt="">
+                <!-- nav bar links -->
+                <nav class="navbar">
+                    <a onclick="loadHomePage()"><i class="fas fa-home"></i> Home</a>
+                    <a onclick="loadStudentRegistrationPage()"><i class="fas fa-user-plus"></i> Register New
+                        Student</a>
+                    <a onclick="logout()"><i class="fas fa-arrow-right-from-bracket"></i> Logout</a>
+                </nav>
+            </header>
+
+            <!-- search student section -->
+            <div class="home">
+                <div class="search_data search_item">
+                    <div class="login-box">
+                        <!-- title of the section -->
+                        <h1 class="title2">Show Data of a Student</h1>
+                        <!-- form for search -->
+                        <form>
+                            <div class="user-box">
+                                <input type="text" required="" id="surname">
+                                <label>Surname</label>
+                                <!-- search button -->
+                                <a onclick="loadStudentDetails()"> Search</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div id="studentData">
+
+            </div>
+            <footer>
+                <h4>© TutorApp - All Rights Reserved </h4>
+            </footer>
+        </div>
+
+        <!-- add subject section -->
+        <div id="AddSubjectSection">
+            <!-- header / navigation section -->
+            <header>
+                <img src="/assets/Logo.png" alt="">
+                <!-- nav bar links -->
+                <nav class="navbar">
+                    <a onclick="loadHomePage()"><i class="fas fa-home"></i> Home</a>
+                    <a onclick="loadStudentRegistrationPage()"><i class="fas fa-user-plus"></i> Register New
+                        Student</a>
+                    <a onclick="logout()"><i class="fas fa-arrow-right-from-bracket"></i> Logout</a>
+                </nav>
+            </header>
+
+            <!-- section to add subject and level -->
+            <div class="home">
+                <div class="search_items search_item">
+                    <div class="login-box">
+                        <!-- title of the section -->
+                        <h1 class="title2">Add Subject and Level</h1>
+                        <!-- search student section -->
+                        <form>
+                            <div class="user-box">
+                                <input type="text" required="" id="studentSurname">
+                                <label>Surname</label>
+                            </div>
+                            <!-- search button -->
+                            <a onclick="loadStudentSubject()"> Search</a>
+                        </form>
+                        <!--  student details display section -->
+                        <div id="detailsStudentLevel">
+                            <form id="initialForm">
+                                <div class="user-box">
+                                    <input type="text" required="" disabled>
+                                    <label>Level</label>
+                                </div>
+                                <div class="user-box">
+                                    <input type="text" required="" disabled>
+                                    <label>Subject</label>
+                                </div>
+                                <!-- done button -->
+                                <a> Done </a>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- footer section -->
+            <footer>
+                <h4>© TutorApp - All Rights Reserved </h4>
+            </footer>
+        </div>
+
+        <!-- add grades section -->
+        <div id="AddGradesSection">
+            <!-- header / navigation section -->
+            <header>
+                <img src="/assets/Logo.png" alt="">
+                <!-- nav bar links -->
+                <nav class="navbar">
+                    <a onclick="loadHomePage()"><i class="fas fa-home"></i> Home</a>
+                    <a onclick="loadStudentRegistrationPage()"><i class="fas fa-user-plus"></i> Register New
+                        Student</a>
+                    <a onclick="logout()"><i class="fas fa-arrow-right-from-bracket"></i> Logout</a>
+                </nav>
+            </header>
+
+            <!-- search student section -->
+            <div class="home">
+                <div class="search_items search_item">
+                    <div class="grade-box">
+                        <!-- title of the section -->
+                        <h1 class="title2">Add Grades</h1>
+                        <!-- search form -->
+                        <form>
+                            <!-- input of surname section -->
+                            <div class="user-box">
+                                <input type="text" required="" id="SurnameStudent">
+                                <label>Surname</label>
+                            </div>
+                            <!-- search button -->
+                            <a onclick="StudentData()"> Search</a>
+                        </form>
+                        <!-- add grades section -->
+                        <div id="detailsStudentGrades">
+                            <!-- form to display details and add grades -->
+                            <form class="grade" id="initialForm2">
+                                <p>Level: &nbsp; <input type="text" disabled></p>
+                                <p>Subject: &nbsp; <input type="text" class="inputSubject">
+                                    &nbsp; Grade: &nbsp; <input type="text" class="inputGrade">
+                                </p>
+                                <!-- done button -->
+                                <a> Done </a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer section -->
+            <footer>
+                <h4>© TutorApp - All Rights Reserved </h4>
+            </footer>
+        </div>
+
+        <!-- linking javascript script -->
+        <script src="/javascript/script.js"></script>
+    </body>
+
+</html>

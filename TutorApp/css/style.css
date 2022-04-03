@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+/* styling of the html page */
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-size: 100%;
+    background-color: #FFEDDB;
+}
+
+/* styling of the header section */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content: space-between;
+    padding: 10px 5%;
+}
+
+/* styling of the navbar links */
+header .navbar a {
+    font-size: 24px;
+    color: black;
+    margin: 0 16px;
+    text-decoration: none;
+    justify-content: space-between;
+}
+
+/* styling of the navbar links when hovered*/
+header .navbar a:hover {
+    text-decoration: double underline;
+}
+
+/* styling of the container */
+.row {
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+/* styling of the content in the container */
+.items {
+    height: 600px;
+    width: 900px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.445);
+}
+
+/* styling of the content in the container */
+.item {
+    margin-bottom: 50px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 40%);
+}
+
+/* styling of the footer */
+footer {
+    position: fixed;
+    left: 0;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    color: black;
+    font-size: 24px;
+}
+
+/* styling of the title */
+.title {
+    text-align: center;
+    font-size: 60px;
+}
+
+/* styling of the login box */
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+/* styling of the inputs fields in the login box */
+.login-box .user-box,
+.grade-box .user-box {
+    position: relative;
+}
+
+/* styling of the inputs in the login box */
+.login-box .user-box input,
+.grade-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+/* styling of the labels */
+.login-box .user-box label,
+.grade-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+/* styling of the labels when focused */
+.login-box .user-box input:focus~label,
+.login-box .user-box input:valid~label,
+.grade-box .user-box input:focus~label,
+.grade-box .user-box input:valid~label {
+    top: -30px;
+    left: 0;
+    color: #0a0a0a;
+    font-size: 22px;
+}
+
+/* styling of the form links */
+.login-box form a,
+.grade-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-left: 35%;
+    color: #FFEDDB;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+}
+
+/* styling of the links when hovered */
+.login-box a:hover,
+.grade-box a:hover {
+    background: #FFEDDB;
+    color: black;
+    box-shadow: 0 0 5px #fdfdfd,
+        0 0 25px #fdfdfd, 0 0 50px #fdfdfd, 0 0 100px #fdfdfd;
+}
+
+/* styling of the span */
+.login-box a span {
+    position: absolute;
+    display: block;
+}
+
+/* style of the home section */
+.home {
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+/* styling of the home items */
+.home_items {
+    height: 600px;
+    width: 900px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.445);
+    float: left;
+}
+
+/* styling of the home items */
+.home_item {
+    margin-bottom: 50px;
+    position: relative;
+    left: 50%;
+    transform: translate(-78%, 35%);
+}
+
+/* style of the tutor details display */
+.home_tutor {
+    height: 400px;
+    width: 400px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.445);
+    float: left;
+}
+
+/* style of the tutor details display */
+.home_tutor1 {
+    margin-bottom: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translate(80%, 55%);
+}
+
+/* styling of the profile_picture */
+.profile_picture {
+    border-radius: 50%;
+    width: 200px;
+    transform: translate(50%, 35%);
+}
+
+/* styling of the tutor details */
+.TutorDetails {
+    transform: translate(0%, 100%);
+    text-align: center;
+}
+
+/* styling of the tutor details / span */
+.TutorDetails span {
+    font-weight: 100;
+}
+
+/* styling of the home section */
+.home {
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+/* styling of the home option section */
+.home_option {
+    height: 250px;
+    width: 250px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-color: rgba(235, 212, 212, 0.445);
+    float: left;
+}
+
+/* styling of the home option icons */
+.home_option i {
+    font-size: 80px;
+    color: #000;
+}
+
+/* styling of the home option paragraph */
+.home_option p {
+    font-size: 22px;
+    font-weight: 900;
+    color: #000;
+}
+
+/* styling of the home option when hovered */
+.home_option:hover {
+    background-color: #25252570;
+}
+
+/* styling of the home option icons and paragraph when hovered */
+.home_option:hover i,
+.home_option:hover p {
+    color: #FFEDDB;
+}
+
+/* styling of the home option 1 */
+.home_option1 {
+    text-align: center;
+    margin-bottom: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-155%, 95%);
+}
+
+/* styling of the home option 2 */
+.home_option2 {
+    text-align: center;
+    margin-bottom: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-210%, 205%);
+}
+
+/* styling of the home option 3 */
+.home_option3 {
+    text-align: center;
+    margin-bottom: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-95%, 205%);
+}
+
+/* styling of the search section */
+.search_data {
+    height: 300px;
+    width: 700px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.445);
+}
+
+/* styling of the search items section */
+.search_items {
+    overflow: auto;
+    height: 600px;
+    width: 700px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.445);
+}
+
+/* styling of the search items section */
+.search_item {
+    margin-bottom: 20px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 40%);
+}
+
+/* styling of the display items section */
+.display_items {
+    overflow: auto;
+    height: 400px;
+    width: 600px;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.445);
+    overflow: auto;
+}
+
+/* styling of the display items section */
+.display_item {
+    margin-bottom: 50px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 40%);
+}
+
+/* styling of the title */
+.title2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+/* styling of the details section */
+.details {
+    text-align: center;
+    padding: 40px;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+/* styling of the details span */
+.details span {
+    font-weight: 500;
+}
+
+/* styling of the details section */
+.details hr {
+    height: 2px;
+    border-width: 0;
+    color: rgb(3, 3, 3);
+    background-color: rgb(8, 8, 8);
+    margin-bottom: 30px;
+}
+
+/* styling of the grade paragraph section */
+.grade p {
+    color: #fff;
+    padding-bottom: 15px;
+}
+
+/* styling of the grade input section */
+.grade input {
+    width: 80%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+    outline: none;
+    font-size: 16px;
+    color: #fdfdfd;
+}
+
+/* styling of the grade-box section */
+.grade-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+/* styling of the grade input subject section */
+.grade .inputSubject {
+    width: 40%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+}
+
+/* styling of the grade input grade section */
+.grade .inputGrade {
+    width: 20%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fff;
+}

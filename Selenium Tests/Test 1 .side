@@ -1,0 +1,111 @@
+{
+  "id": "9b213989-fe3c-409a-b43d-5686f77a312b",
+  "version": "2.0",
+  "name": "Test 1 ",
+  "url": "http://localhost:3000",
+  "tests": [{
+    "id": "3f81535b-7d84-41b5-a319-25c01283667e",
+    "name": "Login Test",
+    "commands": [{
+      "id": "d68df601-3654-4332-9668-14c98651d86a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3cf3989b-bc0a-42de-9cd3-4356e051856b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1048",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "571914d4-977c-47c6-8517-917fb3bb7ff0",
+      "comment": "",
+      "command": "click",
+      "target": "id=tutormail",
+      "targets": [
+        ["id=tutormail", "id"],
+        ["css=#tutormail", "css:finder"],
+        ["xpath=//input[@id='tutormail']", "xpath:attributes"],
+        ["xpath=//div[@id='loginSection']/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff22965c-aa1b-4607-afbe-55e58ae7c512",
+      "comment": "",
+      "command": "type",
+      "target": "id=tutormail",
+      "targets": [
+        ["id=tutormail", "id"],
+        ["css=#tutormail", "css:finder"],
+        ["xpath=//input[@id='tutormail']", "xpath:attributes"],
+        ["xpath=//div[@id='loginSection']/div/div/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "howard.m@gmail.com"
+    }, {
+      "id": "35669232-4425-41de-becd-e127a31e5107",
+      "comment": "",
+      "command": "type",
+      "target": "id=tutorpass",
+      "targets": [
+        ["id=tutorpass", "id"],
+        ["css=#tutorpass", "css:finder"],
+        ["xpath=//input[@id='tutorpass']", "xpath:attributes"],
+        ["xpath=//div[@id='loginSection']/div/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Howard01"
+    }, {
+      "id": "e963f82b-07c3-4ea2-be5e-f6b77080d7d4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=LOGIN",
+      "targets": [
+        ["linkText=LOGIN", "linkText"],
+        ["css=form:nth-child(2) > a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'LOGIN')]", "xpath:link"],
+        ["xpath=//a[@onclick='loginTutor()']", "xpath:attributes"],
+        ["xpath=//div[@id='loginSection']/div/div/div/form/a", "xpath:idRelative"],
+        ["xpath=//form/a", "xpath:position"],
+        ["xpath=//a[contains(.,'LOGIN')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5d024440-be7f-4379-927c-e75c60ce8cb6",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=tutormail",
+      "targets": [],
+      "value": "howard.m@gmail.com"
+    }, {
+      "id": "6b5e9e3d-d79d-4bbb-a7e6-3d1103179d25",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logout",
+      "targets": [
+        ["linkText=Logout", "linkText"],
+        ["css=#HomeSection a:nth-child(3)", "css:finder"],
+        ["xpath=//a[contains(text(),'Logout')]", "xpath:link"],
+        ["xpath=//a[@onclick='logout()']", "xpath:attributes"],
+        ["xpath=//div[@id='HomeSection']/header/nav/a[3]", "xpath:idRelative"],
+        ["xpath=//a[3]", "xpath:position"],
+        ["xpath=//a[contains(.,' Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "19c626ba-ea8a-49f6-a396-7f1ec4ea89f1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["3f81535b-7d84-41b5-a319-25c01283667e"]
+  }],
+  "urls": ["http://localhost:3000/"],
+  "plugins": []
+}
